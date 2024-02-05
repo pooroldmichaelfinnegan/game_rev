@@ -1,0 +1,11 @@
+_ignore/
+_res/
+
+# garbage
+.DS_Store
+.vscode
+
+# heavies
+target/
+node_modules/
+
