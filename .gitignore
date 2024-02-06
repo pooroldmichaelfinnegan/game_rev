@@ -1,5 +1,4 @@
-_ignore/
-_res/
+_files/
 
 # garbage
 .DS_Store

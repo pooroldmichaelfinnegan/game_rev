@@ -1,0 +1,19 @@
+{
+    "asset": { "version": "2.0" },
+    "scene": 0,
+    "scenes": [
+        { "nodes": [ 0 ] }
+    ], "nodes": [
+        { "mesh": 0 }
+    ], "meshes": [
+        { "primitives": [
+	    { "mode": 4, "attributes": { "POSITION": 0 }}
+	]}
+    ], "accessors": [
+         { "bufferView": 0, "byteOffset": 0, "count": 11495, "componentType": 5126, "type": "VEC3", "min": [-19247.75390625, -3930.5615234375, -6789.76953125], "max": [19210.50390625, 3629.50732421875, 13179.5009765625] }
+    ], "bufferViews": [
+        { "buffer": 0, "byteStride": 24, "byteLength": 827640, "byteOffset": 1250852, "target": 34962 }
+    ], "buffers": [
+        { "uri": "../_files/world_coll.obe", "byteLength": 2078512 }
+    ]
+}
