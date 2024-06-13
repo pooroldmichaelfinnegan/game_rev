@@ -127,7 +127,11 @@ fn main() -> io::Result<()> {
         (tmp, crc) = parse_crc(tmp).unwrap();
         let (garbage, _) = take::<u32, &[u8], ()>(crc.name_offset)(names_block).unwrap();
         let (_, name_bytes) = take_till::<fn(u8) -> bool, &[u8], ()>(|b| b == 0)(garbage).unwrap();
-        // if name_bytes == b"" { continue; }
+
+        if name_bytes == b"" {
+            println!(" skipping {:?}", &name_bytes);
+            continue;
+        }
         // dbg!(&crc);
 
         fn win_to_posix_path(s: String) -> String {
@@ -135,6 +139,7 @@ fn main() -> io::Result<()> {
         }
 
         let name = String::from_utf8_lossy(name_bytes).to_string();
+
         let mut tmp_path = out.clone();
         tmp_path.push(win_to_posix_path(name));
 
